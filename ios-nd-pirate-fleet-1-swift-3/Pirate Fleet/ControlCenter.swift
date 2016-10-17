@@ -47,7 +47,7 @@ class ControlCenter {
         
         var finalScore: Int
         
-        finalScore = (gameStats.numberOfHitsOnEnemy * gameStats.sinkBonus) + ((5-gameStats.humanShipsSunk) * gameStats.shipBonus) - ((gameStats.numberOfMissesByHuman/5 - gameStats.numberOfHitsOnEnemy/5) * gameStats.guessPenalty)
+        finalScore = ((5 - gameStats.enemyShipsRemaining) * gameStats.sinkBonus) + ((5-gameStats.humanShipsSunk) * gameStats.shipBonus) - ((gameStats.numberOfHitsOnEnemy + gameStats.numberOfMissesByHuman) * gameStats.guessPenalty)
         
         print("the value of final score is \(finalScore)")
         
